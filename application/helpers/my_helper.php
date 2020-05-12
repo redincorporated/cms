@@ -29,6 +29,14 @@ function email_send($from, $to, $subject, $message) {
   }
 }
 
+function session($name, $value = '') {
+  $obj = &get_instance();
+  if ($value) {
+    $obj->session->set_userdata($name, $value);
+  }
+  return $obj->session->userdata($name);
+}
+
 function upload_config() {
   return array(
     'upload_path' => './uploads',

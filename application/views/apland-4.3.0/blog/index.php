@@ -19,44 +19,18 @@
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-9 col-lg-8">
         <?php foreach ($posts as $post): ?>
-        <!-- Single Blog Post Area-->
-        <div class="single-blog-post mb-5">
-          <div class="post-date"><?php echo $post->date; ?></div>
-          <?php echo anchor('posts/show/' . $post->id, $post->title, 'class="post-title"'); ?>
-          <!-- <a class="post-title" href="blog-details-full.html">For 5 years we have been developing</a> -->
-          <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
-          <div class="post-meta">
-            <a class="post-author" href="#">By Admin</a
-            ><a class="post-tutorial" href="#">Tutorials</a>
+          <!-- Single Blog Post Area-->
+          <div class="single-blog-post mb-5">
+            <div class="post-date"><?php echo $post->date; ?></div>
+            <?php echo anchor('posts/show/' . $post->id, $post->title, 'class="post-title"'); ?>
+            <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
+            <div class="post-meta">
+              <a class="post-author" href="#">By Admin</a
+              ><a class="post-tutorial" href="#">Tutorials</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div>
         <?php endforeach; ?>
-        <!-- <div class="single-blog-post mb-5">
-          <div class="post-date">Jun 20, 2020</div><a class="post-title" href="blog-details-full.html">This is sign you have been looking for</a><img class="post-thumbnail" src="img/blog-img/2.jpg" alt="">
-          <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#">Tutorials</a></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div>
-        <div class="single-blog-post mb-5">
-          <div class="post-date">Jun 18, 2020</div><a class="post-title" href="blog-details-full.html">Three men laughing while looking in the laptop inside room</a><img class="post-thumbnail" src="img/blog-img/3.jpg" alt="">
-          <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#">Tutorials</a></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div>
-        <div class="single-blog-post mb-5">
-          <div class="post-date">Jun 16, 2020</div><a class="post-title" href="blog-details-full.html">Live, work, creative</a><img class="post-thumbnail" src="img/blog-img/4.jpg" alt="">
-          <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#">Tutorials</a></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div>
-        <div class="single-blog-post mb-5">
-          <div class="post-date">Jun 14, 2020</div><a class="post-title" href="blog-details-full.html">Architectural photography of building with people.</a><img class="post-thumbnail" src="img/blog-img/5.jpg" alt="">
-          <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#">Tutorials</a></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div>
-        <div class="single-blog-post mb-5">
-          <div class="post-date">Jun 12, 2020</div><a class="post-title" href="blog-details-full.html">Why we use Apple phone randomly?</a><img class="post-thumbnail" src="img/blog-img/6.jpg" alt="">
-          <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#">Tutorials</a></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
-        </div> -->
       </div>
     </div>
     <div class="row">

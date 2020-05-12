@@ -13,3 +13,10 @@ function page_form_validate() {
   $obj->form_validation->set_rules('title', 'Title', 'required');
   $obj->form_validation->set_rules('content', 'Content', 'required');
 }
+
+function get_pages() {
+  $obj = &get_instance();
+  $obj->load->model('page_model');
+  $pages = $obj->page_model->find_all();
+  return $pages;
+}

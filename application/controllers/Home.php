@@ -1,5 +1,7 @@
 <?php
+
 class Home extends CI_Controller {
+
   function __construct() {
     parent::__construct();
     $this->load->model('post_model');
@@ -17,4 +19,5 @@ class Home extends CI_Controller {
   function contact() {
     $this->layout->view('contact');
   }
+
 }
