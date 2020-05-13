@@ -21,3 +21,15 @@ create table users(
   email varchar(255)
 );
 
+create table tags(
+  id integer not null primary key auto_increment,
+  tag varchar(255)
+);
+
+create table post_tags(
+  id integer not null primary key auto_increment,
+  post_id integer,
+  tag_id integer,
+  date datetime
+);
+

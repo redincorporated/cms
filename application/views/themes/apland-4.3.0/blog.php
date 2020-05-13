@@ -25,8 +25,8 @@
             <?php echo anchor('posts/show/' . $post->id, $post->title, 'class="post-title"'); ?>
             <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
             <div class="post-meta">
-              <a class="post-author" href="#">By Admin</a
-              ><a class="post-tutorial" href="#">Tutorials</a>
+              <a class="post-author" href="#">By Admin</a>
+              <a class="post-tutorial" href="#">Tutorials</a>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
           </div>
@@ -53,7 +53,7 @@
   </div>
 </div>
 <!-- CTA Area-->
-<div class="cta-area section_padding_130_80">
+<!--<div class="cta-area section_padding_130_80">
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <div class="col-12 col-sm-8">
@@ -64,4 +64,4 @@
       <div class="col-12 col-sm-4 text-sm-right"><a class="btn apland-btn btn-4 mb-50" href="#">Let's talk Us</a></div>
     </div>
   </div>
-</div>
+</div>-->

@@ -1,5 +1,5 @@
 <!-- Header Area-->
-<header class="header_area">
+<header class="header_area white-nav">
   <div class="main_header_area">
     <div class="container">
       <div class="classy-nav-container breakpoint-off">
@@ -18,7 +18,7 @@
               <ul id="corenav">
                 <li><?php echo anchor('.', 'Home'); ?></li>
                 <?php foreach (get_pages() as $page): ?>
-                  <li><?php echo anchor('pages/show/' . $page->id, $page->title); ?></li>
+                  <li><?php echo anchor('page/' . $page->id, $page->title); ?></li>
                 <?php endforeach; ?>
                 <li><?php echo anchor('blog', 'Blog'); ?></li>
                 <li><?php echo anchor('contact', 'Contact'); ?></li>

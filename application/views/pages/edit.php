@@ -5,7 +5,7 @@
   <?php echo form_error('title'); ?>
 </p>
 <p>Content<br>
-  <?php echo form_input('content', $page->content); ?>
+  <?php echo form_textarea('content', $page->content); ?>
   <?php echo form_error('content'); ?>
 </p>
 <p>
