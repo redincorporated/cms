@@ -15,7 +15,6 @@ class Layout {
     if ($theme) {
       $this->set_layout($layout);
     }
-    echo $this->layout . ' - ' . $this->theme;
     $data['content'] = $this->obj->load->view($this->theme . '/' . $view, $data, TRUE);
     $this->obj->load->view($this->theme . '/' . $this->layout, $data);
   }

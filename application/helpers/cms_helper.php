@@ -39,15 +39,20 @@ function get_pages() {
   return $obj->cms_model->get_pages();
 }
 
-function section($page) {
-  $obj = &get_instance();
-  $obj->load->view(get_theme() . '/' . $page);
-}
-
 function login_form() {
   $obj = &get_instance();
   return array(
     $obj->input->post('username'),
     $obj->input->post('password'),
   );
+}
+
+function section($page) {
+  $obj = &get_instance();
+  $obj->load->view(get_theme() . '/' . $page);
+}
+
+function theme_path() {
+  $obj = &get_instance();
+  return trimmed_base_url() . '/application/views/' . $obj->layout->get_theme();
 }
