@@ -33,3 +33,16 @@ create table post_tags(
   date datetime
 );
 
+create table post_comments(
+  id integer not null primary key auto_increment,
+  post_id integer,
+  date datetime,
+  name varchar(255),
+  email varchar(255),
+  comments mediumtext
+);
+
+alter table posts add user_id integer;
+alter table posts change content content mediumtext;
+alter table pages add name varchar(255);
+

@@ -22,13 +22,14 @@
           <!-- Single Blog Post Area-->
           <div class="single-blog-post mb-5">
             <div class="post-date"><?php echo $post->date; ?></div>
-            <?php echo anchor('posts/show/' . $post->id, $post->title, 'class="post-title"'); ?>
+            <?php echo anchor('post/' . $post->id, $post->title, 'class="post-title"'); ?>
             <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
             <div class="post-meta">
               <a class="post-author" href="#">By Admin</a>
               <a class="post-tutorial" href="#">Tutorials</a>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p><a class="btn apland-btn mt-3" href="blog-details-full.html">Continue Reading</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, animi, numquam. Nam suscipit iste enim deleniti vitae facere earum doloribus, tempora alias quas voluptatibus aut, voluptates qui nihil, quisquam quos.</p>
+            <?php echo anchor('post/' . $post->id, 'Continue Reading', 'class="btn apland-btn mt-3"'); ?>
           </div>
         <?php endforeach; ?>
       </div>

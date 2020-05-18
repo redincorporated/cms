@@ -24,7 +24,9 @@
                 <li><?php echo anchor('contact', 'Contact'); ?></li>
               </ul>
               <!-- Login Button-->
-              <div class="login-btn-area ml-5 mt-5 mt-lg-0"><a class="btn apland-btn" href="public/themes/apland-4.3.0/#">Get Started</a></div>
+              <div class="login-btn-area ml-5 mt-5 mt-lg-0">
+                <?php echo anchor('cms/admin_login', 'Log in', 'class="btn apland-btn"'); ?>
+              </div>
             </div>
           </div>
         </nav>

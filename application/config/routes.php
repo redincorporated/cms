@@ -54,9 +54,14 @@ $route['default_controller'] = 'cms/home';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['404_override'] = 'cms/show_404';
-$route['admin/login'] = 'cms/admin_login';
 $route['blog'] = 'cms/blog';
 $route['contact'] = 'cms/contact';
+$route['post/(:any)'] = 'cms/post/$1';
+$route['leave_comment/(:any)'] = 'cms/leave_comment/$1';
+$route['logout'] = 'cms/logout';
+
+// Admin routes
+$route['admin/login'] = 'cms/admin_login';
 $route['posts'] = 'cms/posts';
 $route['posts/add'] = 'cms/add_post';
 $route['posts/edit/(:any)'] = 'cms/edit_post/$1';

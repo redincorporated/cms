@@ -27,7 +27,6 @@ date_default_timezone_set('Asia/Manila');
  */
 $config['base_url'] = 'http://localhost:8888/red/cms';
 $config['enable_profiler'] = true;
-$config['theme'] = 'apland-4.3.0';
 
 /*
   |--------------------------------------------------------------------------

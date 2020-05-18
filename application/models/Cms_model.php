@@ -15,6 +15,10 @@ class Cms_model extends CI_Model {
     return $this->db->get_where('pages', array('id' => $page_id))->row();
   }
 
+  function get_page_by_name($page_nmae) {
+    return $this->db->get_where('pages', array('name' => $page_nmae))->row();
+  }
+
   function read_page($page_id) {
     return $this->db->get_where('pages', array('id' => $page_id))->row();
   }
@@ -34,11 +38,18 @@ class Cms_model extends CI_Model {
   // End page functions
   // Start post functions
   function get_posts() {
-    return $this->db->get('posts')->result();
+    $this->db->select('p.*');
+    $this->db->select('u.username');
+    $this->db->join('users u', 'u.id = p.user_id');
+    $this->db->order_by('p.date', 'desc');
+    return $this->db->get('posts p')->result();
   }
 
   function get_post($post_id) {
-    return $this->db->get_where('posts', array('id' => $post_id))->row();
+    $this->db->select('p.*');
+    $this->db->select('u.username');
+    $this->db->join('users u', 'u.id = p.user_id');
+    return $this->db->get_where('posts p', array('p.id' => $post_id))->row();
   }
 
   function save_post($post) {
@@ -64,4 +75,15 @@ class Cms_model extends CI_Model {
   }
 
   // End post functions
+  // Start comments functions
+  function get_post_comments($post_id) {
+    $this->db->where('post_id', $post_id);
+    return $this->db->get('post_comments')->result();
+  }
+
+  function save_post_comment($comment) {
+    $this->db->insert('post_comments', $comment);
+  }
+
+  // End comments functions
 }
