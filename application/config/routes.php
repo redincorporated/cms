@@ -63,11 +63,11 @@ $route['404_override'] = '';
 // Admin routes
 $route['admin/login'] = 'cms/login';
 $route['posts'] = 'cms/posts';
-//$route['posts/add'] = 'cms/add_post';
-//$route['posts/edit/(:any)'] = 'cms/edit_post/$1';
-//$route['posts/delete/(:any)'] = 'cms/delete_post/$1';
+$route['posts/add'] = 'cms/add_post';
+$route['posts/edit/(:any)'] = 'cms/edit_post/$1';
+$route['posts/delete/(:any)'] = 'cms/delete_post/$1';
 $route['pages'] = 'cms/pages';
-//$route['pages/add'] = 'cms/add_page';
-//$route['pages/edit/(:any)'] = 'cms/edit_page/$1';
-//$route['pages/delete/(:any)'] = 'cms/delete_page/$1';
+$route['pages/add'] = 'cms/add_page';
+$route['pages/edit/(:any)'] = 'cms/edit_page/$1';
+$route['pages/delete/(:any)'] = 'cms/delete_page/$1';
 $route['page/(:any)'] = 'cms/page/$1';

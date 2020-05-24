@@ -14,23 +14,23 @@ class Post_model extends CI_Model {
     return $this->db->get('posts p')->result();
   }
 
-  function read($post_id) {
+  function read($id) {
     $this->db->select('p.*');
     $this->db->select('u.username');
     $this->db->join('users u', 'u.id = p.user_id');
-    return $this->db->get_where('posts p', array('p.id' => $post_id))->row();
+    return $this->db->get_where('posts p', array('p.id' => $id))->row();
   }
 
   function save($post) {
     $this->db->insert('posts', $post);
   }
 
-  function update($post, $post_id) {
-    $this->db->update('posts', $post, array('id' => $post_id));
+  function update($post, $id) {
+    $this->db->update('posts', $post, array('id' => $id));
   }
 
-  function delete($post_id) {
-    $this->db->delete('posts', array('id' => $post_id));
+  function delete($id) {
+    $this->db->delete('posts', array('id' => $id));
   }
 
 }

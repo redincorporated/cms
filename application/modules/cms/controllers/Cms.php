@@ -44,27 +44,27 @@ class Cms extends MY_Controller {
 
   function add_post() {
     if ($this->input->post()) {
-      $post = post_form(session('user_id'));
+      $post = post_form($this->session->userdata('user_id'));
       post_form_validate();
       if ($this->form_validation->run() != FALSE) {
         $this->post_model->save($post);
         redirect('posts');
       }
     }
-    $this->load->view('posts/add', null, 'admin_layout');
+    load_view('posts/add', null, 'admin_layout');
   }
 
   function edit_post($post_id) {
     if ($this->input->post()) {
-      $post = post_form($post_id);
+      $post = post_form($this->session->userdata('user_id'));
       post_form_validate();
       if ($this->form_validation->run() != FALSE) {
         $this->post_model->update($post, $post_id);
         redirect('posts');
       }
     }
-    $data['post'] = $this->cms_model->get_post($post_id);
-    $this->load->view('posts/edit', $data, 'admin_layout', '');
+    $data['post'] = $this->post_model->read($post_id);
+    load_view('posts/edit', $data, 'admin_layout', '');
   }
 
   function delete_post($post_id) {
@@ -86,7 +86,7 @@ class Cms extends MY_Controller {
         redirect('pages');
       }
     }
-    $this->load->view('pages/add', null, 'admin_layout', '');
+    load_view('pages/add', null, 'admin_layout', '');
   }
 
   function edit_page($page_id) {
@@ -99,7 +99,7 @@ class Cms extends MY_Controller {
       }
     }
     $data['page'] = $this->page_model->read($page_id);
-    $this->load->view('pages/edit', $data, 'admin_layout');
+    load_view('pages/edit', $data, 'admin_layout');
   }
 
   function delete_page($page_id) {
