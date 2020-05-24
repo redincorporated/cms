@@ -1,5 +1,5 @@
 <h3>Pages</h3>
-<p><?php echo anchor('pages/add', 'Add page'); ?></p>
+<p><?php echo anchor('pages/add', '<i class="fa fa-plus-circle" aria-hidden="true"></i> Add page', 'class="btn btn-sm btn-secondary"'); ?></p>
 <table class="table">
   <tr>
     <th>Title</th>
@@ -7,7 +7,7 @@
   </tr>
   <?php foreach ($pages as $page): ?>
     <tr>
-      <td><?php echo $page->title; ?></td>
+      <td><?php echo anchor('page/' . $page->id, $page->title, 'target="_blank"'); ?></td>
       <td>
         <?php echo anchor('pages/edit/' . $page->id, 'Edit'); ?>
         <a href='javascript:void(0);' onclick="deletePage('<?php echo $page->id; ?>', <?php echo $page->id; ?>);" title="Delete">Delete</a>
