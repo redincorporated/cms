@@ -53,21 +53,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'cms/home';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['404_override'] = 'cms/show_404';
-$route['blog'] = 'cms/blog';
-$route['contact'] = 'cms/contact';
-$route['post/(:any)'] = 'cms/post/$1';
-$route['leave_comment/(:any)'] = 'cms/leave_comment/$1';
-$route['logout'] = 'cms/logout';
+$route['404_override'] = '';
 
+//$route['blog'] = 'cms/blog';
+//$route['contact'] = 'cms/contact';
+//$route['post/(:any)'] = 'cms/post/$1';
+//$route['leave_comment/(:any)'] = 'cms/leave_comment/$1';
+//$route['logout'] = 'cms/logout';
 // Admin routes
-$route['admin/login'] = 'cms/admin_login';
+$route['admin/login'] = 'cms/login';
 $route['posts'] = 'cms/posts';
-$route['posts/add'] = 'cms/add_post';
-$route['posts/edit/(:any)'] = 'cms/edit_post/$1';
-$route['posts/delete/(:any)'] = 'cms/delete_post/$1';
+//$route['posts/add'] = 'cms/add_post';
+//$route['posts/edit/(:any)'] = 'cms/edit_post/$1';
+//$route['posts/delete/(:any)'] = 'cms/delete_post/$1';
 $route['pages'] = 'cms/pages';
-$route['pages/add'] = 'cms/add_page';
-$route['pages/edit/(:any)'] = 'cms/edit_page/$1';
-$route['pages/delete/(:any)'] = 'cms/delete_page/$1';
+//$route['pages/add'] = 'cms/add_page';
+//$route['pages/edit/(:any)'] = 'cms/edit_page/$1';
+//$route['pages/delete/(:any)'] = 'cms/delete_page/$1';
 $route['page/(:any)'] = 'cms/page/$1';

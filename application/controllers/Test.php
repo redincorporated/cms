@@ -7,7 +7,7 @@ class Test extends CI_Controller {
   }
 
   function a() {
-    echo password_hash('a', PASSWORD_DEFAULT);
+
   }
 
 }
