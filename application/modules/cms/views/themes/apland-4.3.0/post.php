@@ -1,7 +1,7 @@
 <?php section('_header_white'); ?>
 
 <!-- Breadcrumb Area-->
-<div class="breadcrumb-area bg-img bg-black-overlay section_padding_130" style="background-image: url(public/themes/apland-4.3.0/img/bg-img/testimonials.jpg);">
+<div class="breadcrumb-area bg-img bg-black-overlay section_padding_130" style="background-image: url(themes/apland-4.3.0/img/bg-img/testimonials.jpg);">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-9 col-xl-6">
@@ -26,7 +26,7 @@
             <a class="post-author" href="#">By <?php echo $post->username; ?></a>
             <a class="post-tutorial" href="#">Tutorials</a>
           </div>
-          <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
+          <img class="post-thumbnail" src="themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
           <?php echo $post->content; ?>
         </div>
         <!-- Comments Area-->
@@ -38,7 +38,7 @@
               <li class="single_comment_area">
                 <div class="comment-content d-flex">
                   <div class="comment-author">
-                    <img src="public/themes/apland-4.3.0/img/advisor-img/testimonial-1.jpg" alt="author">
+                    <img src="themes/apland-4.3.0/img/advisor-img/testimonial-1.jpg" alt="author">
                   </div>
                   <div class="comment-meta">
                     <a class="post-date" href="#"><?php echo date('j M y', strtotime($comment->date)); ?></a>

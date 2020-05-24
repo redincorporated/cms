@@ -18,5 +18,5 @@ function post_form_validate() {
 
 function get_posts() {
   $obj = &get_instance();
-  return $obj->cms_model->get_posts();
+  return $obj->post_model->find_all();
 }

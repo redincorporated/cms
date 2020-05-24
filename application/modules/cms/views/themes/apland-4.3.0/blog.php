@@ -1,7 +1,7 @@
 <?php section('_header_white'); ?>
 
 <!-- Breadcrumb Area-->
-<div class="breadcrumb-area bg-img bg-black-overlay section_padding_130" style="background-image: url(public/themes/apland-4.3.0/img/bg-img/testimonials.jpg);">
+<div class="breadcrumb-area bg-img bg-black-overlay section_padding_130" style="background-image: url(themes/apland-4.3.0/img/bg-img/testimonials.jpg);">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-9 col-xl-6">
@@ -18,12 +18,12 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-9 col-lg-8">
-        <?php foreach ($posts as $post): ?>
+        <?php foreach (get_posts() as $post): ?>
           <!-- Single Blog Post Area-->
           <div class="single-blog-post mb-5">
             <div class="post-date"><?php echo $post->date; ?></div>
             <?php echo anchor('post/' . $post->id, $post->title, 'class="post-title"'); ?>
-            <img class="post-thumbnail" src="public/themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
+            <img class="post-thumbnail" src="themes/apland-4.3.0/img/blog-img/1.jpg" alt="">
             <div class="post-meta">
               <a class="post-author" href="#">By Admin</a>
               <a class="post-tutorial" href="#">Tutorials</a>
