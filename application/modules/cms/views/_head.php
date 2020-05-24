@@ -1,5 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>CMS</title>
+
 <!-- FontAwesome -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -13,7 +15,6 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
 <style>
   body, table, input, select, textarea {
     font-family: 'Roboto', sans-serif;
@@ -27,6 +28,7 @@
   }
 </style>
 
+<link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16">
 <style>
   .container-login {
     width: 280px;
