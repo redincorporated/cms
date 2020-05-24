@@ -24,19 +24,12 @@ function section($page) {
   $obj->load->view('themes/' . config_item('cms_theme') . '/' . $page);
 }
 
-//function load_view($view, $data, $theme) {
-//  $obj = &get_instance();
-//  $x = $theme ? 'themes/' . $theme . '/' : '';
-//  $obj->load->view($x . $view);
-//}
-
 function load_view($view, $data, $layout = 'layout', $theme = '') {
   $obj = &get_instance();
-  $theme = $theme !== null ? $theme : 'themes/' . config_item('cms_theme');
   $data['content'] = $obj->load->view($theme . '/' . $view, $data, TRUE);
   $obj->load->view($theme . '/' . $layout, $data);
 }
 
-function cms_theme_url() {
-  return 'http://localhost:8888/red/cms/application/modules/cms/views/themes/apland-4.3.0';
+function get_cms_theme() {
+  return 'themes/' . config_item('cms_theme');
 }

@@ -13,5 +13,5 @@ function post_comment_form($post_id) {
 
 function get_post_comments($post_id) {
   $obj = &get_instance();
-  return $obj->cms_model->get_post_comments($post_id);
+  return $obj->post_comment_model->find_by_post($post_id);
 }

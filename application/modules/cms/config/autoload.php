@@ -8,4 +8,4 @@
   |
   |	$autoload['helper'] = array('url', 'file');
  */
-$autoload['helper'] = array('page', 'post', 'cms');
+$autoload['helper'] = array('page', 'post_comment', 'post', 'cms');

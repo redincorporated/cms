@@ -6,12 +6,40 @@ class Cms extends MY_Controller {
     parent::__construct();
     $this->load->model('user_model');
     $this->load->model('post_model');
+    $this->load->model('post_comment_model');
     $this->load->model('page_model');
   }
 
   function home() {
-    load_view('home', null, 'apland-4.3.0');
+    load_view('home', null, 'layout', get_cms_theme());
   }
+
+  function blog() {
+    $data['posts'] = $this->post_model->find_all();
+    load_view('blog', $data, 'layout', get_cms_theme());
+  }
+
+  function page($page_id) {
+    $data['page'] = $this->page_model->read($page_id);
+    load_view('page', $data, 'layout', get_cms_theme());
+  }
+
+  function post($post_id) {
+    $data['post'] = $this->post_model->read($post_id);
+    load_view('post', $data, 'layout', get_cms_theme());
+  }
+
+  function leave_comment($post_id) {
+    $comment = comment_form($post_id);
+    $this->cms_model->save_post_comment($comment);
+    redirect('post/' . $post_id);
+  }
+
+  function show_404() {
+    $this->load->view(get_theme() . '/404');
+  }
+
+  // Admin functions
 
   function login() {
     $data['message'] = '';
@@ -27,10 +55,6 @@ class Cms extends MY_Controller {
       }
     }
     $this->load->view('login', $data);
-  }
-
-  function index() {
-    echo 'lalala';
   }
 
   function logout() {
