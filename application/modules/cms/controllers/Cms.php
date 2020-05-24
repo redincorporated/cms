@@ -59,6 +59,7 @@ class Cms extends MY_Controller {
 
   function logout() {
     $this->session->sess_destroy();
+    redirect('login');
   }
 
   function posts() {

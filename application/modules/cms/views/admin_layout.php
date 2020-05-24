@@ -1,7 +1,7 @@
 <?php $this->load->view('_head'); ?>
 
 <div class="container">
-  <?php echo img(array('src' => 'assets/img/logo.png', 'width' => 32)); ?>
+  <?php echo img(array('src' => 'assets/img/logo.png', 'width' => 42)); ?>
   <nav>
     <?php echo anchor('posts', '<i class="fa fa-clipboard" aria-hidden="true"></i> Posts'); ?>
     | <?php echo anchor('pages', '<i class="fa fa-pagelines" aria-hidden="true"></i> Pages'); ?>
@@ -11,3 +11,12 @@
 
   <?php echo $content; ?>
 </div>
+
+<style>
+  .container img {
+    margin-top: 10px;
+  }
+  .container nav {
+    margin: 10px 0;
+  }
+</style>
