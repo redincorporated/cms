@@ -4,6 +4,10 @@
   <?php echo form_input('title', $this->input->post('title')); ?>
   <?php echo form_error('title'); ?>
 </p>
+<p>Teaser<br>
+  <?php echo form_input('teaser', $this->input->post('teaser')); ?>
+  <?php echo form_error('teaser'); ?>
+</p>
 <p>Content<br>
   <?php echo form_textarea('content', $this->input->post('content'), 'class="summernote"'); ?>
   <?php echo form_error('content'); ?>

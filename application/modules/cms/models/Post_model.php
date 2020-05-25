@@ -21,6 +21,13 @@ class Post_model extends CI_Model {
     return $this->db->get_where('posts p', array('p.id' => $id))->row();
   }
 
+  function read_by_title($title) {
+    $this->db->select('p.*');
+    $this->db->select('u.username');
+    $this->db->join('users u', 'u.id = p.user_id');
+    return $this->db->get_where('posts p', array('p.title' => $title))->row();
+  }
+
   function save($post) {
     $this->db->insert('posts', $post);
   }

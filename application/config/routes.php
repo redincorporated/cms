@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'cms/home';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['404_override'] = '';
+$route['404_override'] = 'cms/show_404';
 
 //$route['contact'] = 'cms/contact';
 //$route['leave_comment/(:any)'] = 'cms/leave_comment/$1';

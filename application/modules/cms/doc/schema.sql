@@ -46,3 +46,5 @@ alter table posts add user_id integer;
 alter table posts change content content mediumtext;
 alter table pages add name varchar(255);
 alter table pages change content content mediumtext;
+alter table posts add teaser varchar(255);
+

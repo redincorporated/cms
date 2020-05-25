@@ -8,7 +8,7 @@
   </tr>
   <?php foreach ($posts as $post): ?>
     <tr>
-      <td><?php echo $post->date; ?></td>
+      <td><?php echo date('M j', strtotime($post->date)); ?></td>
       <td><?php echo anchor('post/' . $post->id, $post->title); ?></td>
       <td>
         <?php echo anchor('posts/edit/' . $post->id, 'Edit'); ?>

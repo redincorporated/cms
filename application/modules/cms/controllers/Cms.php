@@ -24,8 +24,8 @@ class Cms extends MY_Controller {
     load_view('page', $data, 'layout', get_cms_theme());
   }
 
-  function post($post_id) {
-    $data['post'] = $this->post_model->read($post_id);
+  function post($post_title) {
+    $data['post'] = $this->post_model->read_by_title($post_title);
     load_view('post', $data, 'layout', get_cms_theme());
   }
 
@@ -36,7 +36,7 @@ class Cms extends MY_Controller {
   }
 
   function show_404() {
-    $this->load->view(get_theme() . '/404');
+    load_view('404', null, 'layout', get_cms_theme());
   }
 
   // Admin functions

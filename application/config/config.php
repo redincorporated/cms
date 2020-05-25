@@ -26,7 +26,7 @@ date_default_timezone_set('Asia/Manila');
   |
  */
 $config['base_url'] = 'http://localhost:8888/red/cms';
-$config['cms_theme'] = 'apland-4.3.0';
+$config['cms_theme'] = 'startbootstrap-clean-blog-gh-pages';
 
 /*
   |--------------------------------------------------------------------------

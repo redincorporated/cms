@@ -53,3 +53,5 @@ application/models
 application/views/
 
 *.backup
+
+node_modules/

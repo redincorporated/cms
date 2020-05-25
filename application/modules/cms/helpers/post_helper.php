@@ -6,6 +6,7 @@ function post_form($user_id) {
     'user_id' => $user_id,
     'date' => now(),
     'title' => $obj->input->post('title'),
+    'teaser' => $obj->input->post('teaser'),
     'content' => $obj->input->post('content'),
   );
 }
