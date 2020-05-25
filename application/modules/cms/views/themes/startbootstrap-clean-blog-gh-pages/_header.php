@@ -9,24 +9,29 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <?php echo anchor('.', 'Home', 'class="nav-link"'); ?>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="post.html">Sample Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
+        <?php foreach (get_pages() as $page): ?>
+          <li class="nav-item">
+            <?php echo anchor('page/' . $page->id, $page->title, 'class="nav-link"'); ?>
+          </li>
+        <?php endforeach; ?>
+        <!--        <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="post.html">Sample Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>-->
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+<header class="masthead" style="background-image: url('themes/startbootstrap-clean-blog-gh-pages/img/home-bg.jpg')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
