@@ -4,6 +4,7 @@ function page_form() {
   $obj = &get_instance();
   return array(
     'title' => $obj->input->post('title'),
+    'teaser' => $obj->input->post('teaser'),
     'content' => $obj->input->post('content'),
   );
 }
