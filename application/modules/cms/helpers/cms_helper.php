@@ -8,6 +8,12 @@ function login_form() {
   );
 }
 
+function redirect_if($condition, $url) {
+  if ($condition) {
+    redirect($url);
+  }
+}
+
 function theme_path() {
   $obj = &get_instance();
   return trimmed_base_url() . '/application/views/' . $obj->layout->get_theme();

@@ -24,8 +24,10 @@ class Cms extends MY_Controller {
     load_view('page', $data, 'layout', get_cms_theme());
   }
 
-  function post($post_title) {
-    $data['post'] = $this->post_model->read_by_title($post_title);
+  function post($post_id) {
+    $post = $this->post_model->read($post_id);
+    redirect_if(!$post, '.');
+    $data['post'] = $post;
     load_view('post', $data, 'layout', get_cms_theme());
   }
 
